@@ -1,16 +1,4 @@
-```markdown
-# Ansible Playbook: Enable Intranet Services
-
-## Objective
-This Ansible playbook automates the setup of intranet services on the server `servera.lab.example.com`. It ensures the installation and configuration of `httpd`, sets up a basic HTML page, enables and configures firewalld, and verifies the setup by testing connectivity to the intranet web server.
-
-## Playbook Structure
-The playbook is divided into two main sections:
-
-### Section 1: Enable Intranet Services
-This section configures the intranet services on the designated server.
-
-```yaml
+---
 - name: Enable intranet services
   hosts: servera.lab.example.com
   become: true
@@ -45,12 +33,7 @@ This section configures the intranet services on the designated server.
         name: httpd
         enabled: true
         state: started
-```
 
-### Section 2: Test Intranet Web Server
-This section validates the intranet web server setup by performing a connection test from the local machine.
-
-```yaml
 - name: Test intranet web server
   hosts: localhost
   become: false
@@ -60,16 +43,3 @@ This section validates the intranet web server setup by performing a connection 
         url: http://servera.lab.example.com
         return_content: yes
         status_code: 200
-```
-
-## Usage
-To execute this playbook:
-
-1. Save the YAML content into a file, e.g., `enable_intranet.yml`.
-2. Run the playbook using the `ansible-playbook` command:
-   
-    ```bash
-    ansible-playbook enable_intranet.yml
-    ```
-Ensure you have proper Ansible configurations and access to the specified hosts before running the playbook.
-```
