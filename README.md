@@ -89,8 +89,3 @@ Ensure you have proper Ansible configurations and access to the specified hosts 
 
 This project is licensed under Red Hat Academy.
 
----
-Feel free to expand this README with additional details, troubleshooting steps, or any other relevant information related to your project.
-```
-
-Feel free to tailor the README further by adding sections like installation steps, troubleshooting guidelines, or any additional configuration details pertinent to your project.
