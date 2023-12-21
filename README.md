@@ -1,13 +1,13 @@
-```
-# Ansible Playbook: Enable Intranet Services
+# Ansible Intranet Services Setup
 
-## Objective
-This Ansible playbook automates the setup of intranet services on the server `servera.lab.example.com`. It ensures the installation and configuration of `httpd`, sets up a basic HTML page, enables and configures firewalld, and verifies the setup by testing connectivity to the intranet web server.
+This Ansible playbook automates the setup of intranet services on the designated server `servera.lab.example.com`. It ensures the installation and configuration of `httpd`, sets up a basic HTML page, enables and configures firewalld, and verifies the setup by testing connectivity to the intranet web server.
 
 ## Playbook Structure
+
 The playbook is divided into two main sections:
 
 ### Section 1: Enable Intranet Services
+
 This section configures the intranet services on the designated server.
 
 ```yaml
@@ -48,6 +48,7 @@ This section configures the intranet services on the designated server.
 ```
 
 ### Section 2: Test Intranet Web Server
+
 This section validates the intranet web server setup by performing a connection test from the local machine.
 
 ```yaml
@@ -63,6 +64,7 @@ This section validates the intranet web server setup by performing a connection 
 ```
 
 ## Usage
+
 To execute this playbook:
 
 1. Save the YAML content into a file, e.g., `enable_intranet.yml`.
@@ -72,4 +74,23 @@ To execute this playbook:
     ansible-playbook enable_intranet.yml
     ```
 Ensure you have proper Ansible configurations and access to the specified hosts before running the playbook.
+
+## Customization
+
+- Adjust the hostname `servera.lab.example.com` in the playbook to match your target server.
+- Modify the HTML content in the `ansible.builtin.copy` task to customize the intranet landing page.
+- Ensure the firewall settings align with your security requirements before deploying in a production environment.
+
+## Contributors
+
+- [Mina George](https://github.com/mina14george)
+
+## License
+
+This project is licensed under Red Hat Academy.
+
+---
+Feel free to expand this README with additional details, troubleshooting steps, or any other relevant information related to your project.
 ```
+
+Feel free to tailor the README further by adding sections like installation steps, troubleshooting guidelines, or any additional configuration details pertinent to your project.
