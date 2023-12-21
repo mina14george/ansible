@@ -1,4 +1,4 @@
-```markdown
+```
 # Ansible Playbook: Enable Intranet Services
 
 ## Objective
